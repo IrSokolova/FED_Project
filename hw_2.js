@@ -17,7 +17,7 @@ async function getImage(email) {
 
     altText.innerText = data.alt;
     title.innerText = data.title;
-    let date_in = new Date(data.year, data.month, data.day);
+    let date_in = new Date(data.year, data.month - 1, data.day);
     date.innerText = date_in.toLocaleDateString();
     document.body.appendChild(outputImg);
     console.log(data);
